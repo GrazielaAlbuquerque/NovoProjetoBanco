@@ -8,10 +8,11 @@ namespace NovoProjetoBanco
     public class ClienteService : IClienteService
     {
         public static List<Cliente> clientes = new List<Cliente>();
-        
-        public Cliente BuscarClientePorNumeroDeConta(int numeroConta) => clientes.Find(x => x.NumeroConta == numeroConta);
-
-        public void ExibirClientes(int numeroConta)
+        public Cliente BuscarCliente(int numeroConta)
+        {
+            clientes.Find(x => x.NumeroConta == numeroConta);
+        }
+        public void ExibirClientes()
         {
             Console.WriteLine("Número da conta        | Nome         | CPF    ");
             for (int i = 0; i < clientes.Count; i++)
@@ -24,48 +25,48 @@ namespace NovoProjetoBanco
         {
             if (tipoConta == "1")
             {
-                PessoaFisica cliente = new PessoaFisica();
+                PessoaFisica pessoaFisica = new PessoaFisica();
                 Console.WriteLine("Data de Nascimento do cliente:");
-                cliente.DataNascimento = DateTime.Parse(Console.ReadLine());
+                pessoaFisica.DataNascimento = DateTime.Parse(Console.ReadLine());
 
-                if (!cliente.EhMaior())
+                if (!pessoaFisica.EhMaior())
                 {
                     Console.WriteLine("Não é possivel abrir a conta pois o Cliente é menor de idade.");
                     return;
                 }
 
-                Console.WriteLine("A idade do cliente é " + cliente.Idade);
+                Console.WriteLine("A idade do cliente é " + pessoaFisica.Idade);
                 Console.WriteLine("Nome do cliente:");
-                cliente.Nome = Console.ReadLine();
+                pessoaFisica.Nome = Console.ReadLine();
                 Console.WriteLine("CPF do cliente:");
-                cliente.CPF = Console.ReadLine();
+                pessoaFisica.CPF = Console.ReadLine();
                 Console.WriteLine("Endereco do cliente:");
-                cliente.Endereco = Console.ReadLine();
+                pessoaFisica.Endereco = Console.ReadLine();
                 Console.WriteLine("Telefone do cliente:");
-                cliente.Telefone = Console.ReadLine();
+                pessoaFisica.Telefone = Console.ReadLine();
                 Console.WriteLine("Email do cliente:");
-                cliente.Email = Console.ReadLine();
+                pessoaFisica.Email = Console.ReadLine();
                 Console.WriteLine("Numero Da Conta");
-                cliente.NumeroConta = int.Parse(Console.ReadLine());
-                clientes.Add(cliente);
+                pessoaFisica.NumeroConta = int.Parse(Console.ReadLine());
+                clientes.Add(pessoaFisica);
 
             }
             else if (tipoConta == "2")
             {
-                PessoaJuridica cliente = new PessoaJuridica();
+                PessoaJuridica pessoaJuridica = new PessoaJuridica();
                 Console.WriteLine("Razão Social do cliente:");
-                cliente.RazaoSocial = Console.ReadLine();
+                pessoaJuridica.RazaoSocial = Console.ReadLine();
                 Console.WriteLine("CNPJ do cliente:");
-                cliente.CNPJ = Console.ReadLine();
+                pessoaJuridica.CNPJ = Console.ReadLine();
                 Console.WriteLine("Endereco do cliente:");
-                cliente.Endereco = Console.ReadLine();
+                pessoaJuridica.Endereco = Console.ReadLine();
                 Console.WriteLine("Telefone do cliente:");
-                cliente.Telefone = Console.ReadLine();
+                pessoaJuridica.Telefone = Console.ReadLine();
                 Console.WriteLine("Email do cliente:");
-                cliente.Email = Console.ReadLine();
+                pessoaJuridica.Email = Console.ReadLine();
                 Console.WriteLine("Numero Da Conta");
-                cliente.NumeroConta = int.Parse(Console.ReadLine());
-                clientes.Add(cliente);
+                pessoaJuridica.NumeroConta = int.Parse(Console.ReadLine());
+                clientes.Add(pessoaJuridica);
             }
         }
     }

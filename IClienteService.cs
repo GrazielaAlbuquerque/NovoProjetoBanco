@@ -1,14 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace NovoProjetoBanco
-{
+using NovoProjetoBanco;
+
     public interface IClienteService
     {
-        void CriarConta(string tipoConta) ;
-        Cliente BuscarClientePorNumeroDeConta(int numeroConta);
-        void  ExibirClientes();
+    Cliente BuscarCliente(int numeroConta);
+    void CriarConta(string tipoConta);
+    void ExibirClientes();
     }
-}

@@ -21,10 +21,9 @@ namespace NovoProjetoBanco
         }
 
         public bool EhMaior() => Idade >= 18;
-
         public override string ResumoCliente()
         {
-           return  $"{NumeroConta} |  {Nome}  | {CPF}";
+           return  $"{NumeroConta} |  {Nome}  | {CPF}   |  {DataNascimento}  | {Endereco}  |  {Telefone}";
         }
     }
 }

@@ -15,7 +15,7 @@ namespace NovoProjetoBanco
         
         public List<Transacao> Extrato { get; set; } = new List<Transacao>();
 
-        public Cliente(string email, string telefone, string end,int numeroConta ) 
+        public Cliente(string email, string telefone, string end,int numeroConta )
         {
             Email=email;
             Telefone =telefone; 
@@ -35,5 +35,16 @@ namespace NovoProjetoBanco
             }
             return saldo;
         }
+    }
+}
+
+
+namespace NovoProjetoBanco
+{
+    public interface IClienteService
+    {
+        public void CriarConta() ;
+        Cliente BuscarCliente();
+        void  ExibirClientes();
     }
 }
