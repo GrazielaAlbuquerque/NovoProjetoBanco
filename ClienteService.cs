@@ -1,17 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using NovoProjetoBanco;
 
 namespace NovoProjetoBanco
 {
     public class ClienteService : IClienteService
     {
         public static List<Cliente> clientes = new List<Cliente>();
-        public Cliente BuscarCliente(int numeroConta)
+
+        public Cliente BuscarClientePorNumeroDeConta(int numeroConta)
         {
-            clientes.Find(x => x.NumeroConta == numeroConta);
+            return clientes.Find(x => x.NumeroConta == numeroConta);
         }
+
         public void ExibirClientes()
         {
             Console.WriteLine("Número da conta        | Nome         | CPF    ");

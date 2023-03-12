@@ -37,14 +37,3 @@ namespace NovoProjetoBanco
         }
     }
 }
-
-
-namespace NovoProjetoBanco
-{
-    public interface IClienteService
-    {
-        public void CriarConta() ;
-        Cliente BuscarCliente();
-        void  ExibirClientes();
-    }
-}

@@ -56,7 +56,7 @@ void AdicionarTransacao()
     Console.WriteLine("Qual a conta?");
     int numeroConta = int.Parse(Console.ReadLine());
 
-    Cliente contaCliente = clienteService.BuscarCliente(numeroConta);
+    Cliente contaCliente = clienteService.BuscarClientePorNumeroDeConta(numeroConta);
 
     if (contaCliente == null)
     {
@@ -77,7 +77,7 @@ void ExibirExtrato()
     Console.WriteLine("Qual a conta?");
     int numeroConta = int.Parse(Console.ReadLine());
 
-    Cliente contaCliente = clienteService.BuscarCliente(numeroConta);
+    Cliente contaCliente = clienteService.BuscarClientePorNumeroDeConta(numeroConta);
 
     if (contaCliente == null)
     {
