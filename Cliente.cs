@@ -15,6 +15,9 @@ namespace NovoProjetoBanco
         
         public List<Transacao> Extrato { get; set; } = new List<Transacao>();
 
+        public Cliente(){
+            
+        }
         public Cliente(string email, string telefone, string end,int numeroConta )
         {
             Email=email;

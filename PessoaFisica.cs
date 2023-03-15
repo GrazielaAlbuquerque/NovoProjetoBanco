@@ -15,6 +15,9 @@ namespace NovoProjetoBanco
             get {return (int)(Math.Floor((DateTime.Now - DataNascimento).TotalDays / 365.25)); } 
             private set {} 
         }
+
+        public PessoaFisica(){
+        }
         public PessoaFisica(string nome, string cpf, DateTime dataNascimento, int idade, string email, string telefone, string end, int numeroConta) : base(email, telefone, end, numeroConta )
         {
         Nome = nome;

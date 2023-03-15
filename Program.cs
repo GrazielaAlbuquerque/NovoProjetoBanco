@@ -5,13 +5,13 @@ ClienteService clienteService = new ClienteService();
 
 
 
-ClienteService.clientes.Add(new PessoaFisica("Graziea", "031", new DateTime(1994, 10, 24), 28, "graziela@", "489999", "Servidao", 3 ));
+//ClienteService.clientes.Add(new PessoaFisica("Graziea", "031", new DateTime(1994, 10, 24), 28, "graziela@", "489999", "Servidao", 3 ));
             
-ClienteService.clientes.Add(new PessoaFisica("Graziea", "031", new DateTime(1994, 10, 24), 28, "graziela@", "489999", "Servidao", 4 ));
+//ClienteService.clientes.Add(new PessoaFisica("Graziea", "031", new DateTime(1994, 10, 24), 28, "graziela@", "489999", "Servidao", 4 ));
             
-ClienteService.clientes.Add(new PessoaJuridica("Xprez","123455", "xprez@", "48999", "Servidão", 23));
+//ClienteService.clientes.Add(new PessoaJuridica("Xprez","123455", "xprez@", "48999", "Servidão", 23));
 
-ClienteService.clientes.Add(new PessoaJuridica("Xprez2","123455", "xprez@", "48999", "Servidão", 24));
+//ClienteService.clientes.Add(new PessoaJuridica("Xprez2","123455", "xprez@", "48999", "Servidão", 24));
 
 
 

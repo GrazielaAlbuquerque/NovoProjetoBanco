@@ -24,7 +24,7 @@ namespace NovoProjetoBanco
         {
             if (tipoConta == "1")
             {
-                PessoaFisica pessoaFisica = new PessoaFisica("Graziea", "031", new DateTime(1994, 10, 24), 28, "graziela@", "489999", "Servidao", 3 );
+                PessoaFisica pessoaFisica = new PessoaFisica();
                 Console.WriteLine("Data de Nascimento do cliente:");
                 pessoaFisica.DataNascimento = DateTime.Parse(Console.ReadLine());
 
@@ -48,11 +48,10 @@ namespace NovoProjetoBanco
                 Console.WriteLine("Numero Da Conta");
                 pessoaFisica.NumeroConta = int.Parse(Console.ReadLine());
                 clientes.Add(pessoaFisica);
-
             }
             else if (tipoConta == "2")
             {
-                PessoaJuridica pessoaJuridica = new PessoaJuridica("Xprez2","123455", "xprez@", "48999", "Servidão", 24);
+                PessoaJuridica pessoaJuridica = new PessoaJuridica();
                 Console.WriteLine("Razão Social do cliente:");
                 pessoaJuridica.RazaoSocial = Console.ReadLine();
                 Console.WriteLine("CNPJ do cliente:");

@@ -9,6 +9,10 @@ namespace NovoProjetoBanco
     {
         public string RazaoSocial { get; set; }
         public string CNPJ { get; set; }
+        public PessoaJuridica()
+        {
+            
+        }
 
         public PessoaJuridica(string razaoSocial, string cnpj, string email, string telefone, string end, int numeroConta) : base (email, telefone, end, numeroConta )
         {
